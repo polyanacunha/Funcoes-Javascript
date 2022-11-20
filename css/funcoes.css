@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+
+input{
+    background:rgb(194, 183, 211);
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    
+    
+}
+input .nota2{
+    position: absolute;
+}
+button{
+    color: white;
+    background: #ab44db;
+    font-family:cursive;
+    border-radius: 30px;
+    border: none;
+}
+.container1{
+    color: white;
+    position: absolute;
+}
+.content2{
+  
+    display: flex;
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+}

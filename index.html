@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="./css/funcoes.css">
+  <title>Multifuncition</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Multifunction
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="index.html">antecessor</a>
+                <a href="about.html">Àrea do retângulo</a>
+                <a href="feature.html">Custo de um carro</a>
+                <a href="contact.html">Dobro de um número</a>
+                <a href="contact.html">Horas de viagem</a>
+                <a href="contact.html">Horas vividas/a>
+                <a href="contact.html">Idade em dias</a>
+                <a href="contact.html">Média</a>
+                <a href="contact.html">IMC</a>
+                <a href="contact.html">multiplica valores</a>
+                <a href="contact.html">percentual de votos</a>
+                <a href="contact.html">Conta de restaurante</a>
+                <a href="contact.html">Salário de funcionário de automobilística</a>
+                <a href="contact.html">Reajuste de salário</a>
+                <a href="contact.html">Tabuada</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <!-- //////////item1- ANTECESSOR ///////// -->
+                <div class="carousel-item active">
+
+                  <div class="detail-box col-md-12">
+                    <div class="img-box1 col-md-7">
+                      <img src="images/antecessor.png" alt="" />
+                    </div>
+                    <div class="firstDiv col-md-5">
+                      <!-- ////////////// item1 parte importante//////////// -->
+                      <div class="container1">
+                        <h1>calcula o antecessor.</h1>
+                        <label for="valor">número</label>
+                        <input id="numero01" type="number" />
+                        <button id="antecessor" type="submit" onclick="calculoAntecessor()">Calcular</button>
+                        <div id="resultado01"></div>
+                      </div>
+                      <script>
+
+                        antecessor.onclick = function calculoAntecessor() {
+                          let resultado = parseInt(document.querySelector("#resultado01"));
+                          let numero01 = parseInt(document.querySelector("#numero01").value);
+                          let calculo01 = parseInt(numero01 - 1);
+                          document.getElementById(
+                            "resultado01"
+                          ).textContent = `o antecessor desse número é ${calculo01}`;
+                        }
+
+                      </script>
+                      <!-- ////////////// item1 parte importante//////////// -->
+
+                    </div>
+                  </div>
+                </div>
+                <!-- //////////item1-end- ANTECESSOR///////// -->
+                <!-- ÁREA DO RETÂNGULO -->
+
+                <div class="carousel-item">
+                  <div class="detail-box col-md-12">
+                    <div class="img-box2 col-md-7">
+                      <img src="images/area.png" alt="" />
+                    </div>
+                    <div class="secondDiv">
+                      <div class="container">
+                        <h1>Calculo da área do retângulo</h1>
+                        <label for="base"> Digite a base do retângulo: </label>
+                        <input id="base" type="number" />
+
+                        <label for="altura">Digite a altura do retângulo: </label>
+                        <input id="altura" type="number" />
+                        <button class="btn2" onclick="areaCalculo()">calcular</button>
+                        <div class="resultado2"></div>
+                     
+
+                      <script>
+                        window.onload = () => {
+                          let button = document.querySelector(".btn2");
+
+                          button.addEventListener("click", areaCalculo);
+                        };
+
+                        
+                        function areaCalculo() {
+                          let resultado2 = parseInt(document.querySelector(".resultado2"));
+                          let base = parseInt(document.querySelector("#base").value);
+                          let altura = parseInt(document.querySelector("#altura").value);
+                          let area = parseInt(base * altura);
+                          document.querySelector(".resultado2").textContent = "area = " + area;
+                          document.querySelector(".resultado2").textContent = `a área do retângulo é de: ${area} metros quadrados`;
+                        }
+                      </script>
+                       </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- ÁREA DO RETÂNGULO -->
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="sr-only">Next</span>
+                </a>
+
+
+                <!-- CUSTO DE UM CARRO -->
+                <div class="carousel-item">
+                  <div class="detail-box col-md-12">
+                    <div class="img-box3 col-md-7">
+                      <img src="images/carro.png" alt="" />
+                    </div>
+                    <div class="thirdDiv ">
+                      <div class="content3">
+
+                        <h1>Custo final de um carro
+                          + 28% do custo do Distribuidor
+                          + 45% de Impostos
+                        </h1>
+                        <label for="fabrica">custo de fábrica</label>
+                        <input id="fabrica" type="number" />
+
+                        <button id="btn3">calcular</button>
+                        <div id="resultado3"></div>
+                      </div>
+
+                      <script>
+                        window.onload = () => {
+                          let button = document.querySelector("#btn3");
+
+                          button.addEventListener("click", custo);
+                        };
+
+                        btn3.onclick = function custo() {
+                          let custoDeFabrica = parseInt(document.querySelector("#fabrica").value);
+                          let percDistribuidor = (28 / 100) * custoDeFabrica;
+                          let percImpostos = (45 / 100) * custoDeFabrica;
+                          let custoFinal = custoDeFabrica + percDistribuidor + percImpostos;
+
+                          document.querySelector("#resultado3").textContent = ` o custo final do carroé de : ${custoFinal} reais`;
+                        }
+                      </script>
+                    </div>
+                  </div>
+                </div>
+                <!-- CUSTO DE UM CARRO -->
+
+                <!-- calcular o dobro de um número indicado pelo usuário -->
+                <div class="carousel-item">
+                  <div class="detail-box col-md-12">
+                    <div class="img-box4 col-md-7">
+                      <img src="images/2x.png" alt="" />
+                    </div>
+                    <div class="fourthDiv">
+                      <div class="content4">
+
+
+                        <h1>Calcule o dobro de um número</h1>
+                        <label for="">Insira um número:</label>
+                        <input class="numberInput1" type="text"></input>
+                        <p id="para1"></p>
+
+
+
+                        <script>
+
+                          const input1 = document.querySelector('.numberInput1');
+                          const para1 = document.querySelector('#para1');
+
+                          function dobrar(num) {
+                            return num * 2;
+
+                          }
+
+                          input1.onchange = function () {
+                            var num = Number(input1.value);
+                            if (isNaN(num)) {
+                              para1.textContent = 'escreva um número!';
+                            } else {
+                              para1.textContent = 'o dobro de ' + num + ' é igual a ' + dobrar(num) + '.';
+                            }
+                          }
+
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // dobro      -->
+                <!-- Horas de viagem -->
+                <div class="carousel-item">
+                  <div class="detail-box col-md-12">
+                    <div class="img-box5 col-md-7">
+                      <img src="images/viagem.png" alt="" />
+                    </div>
+                    <div class="fifthDiv ">
+                      <div class="container">
+                        
+                          <!-- 3.viagem -->
+                          <h1>Calcula horas de viagem</h1>
+                      <label for="">insira o número de dias da viagem:</label>
+                      <input  class="dias" type="number">
+                      <p id="para3"></p>
+                    
+                      <!-- 3.viagem -->
+                      <script>
+                        //3.viagem
+                    const input4 = document.querySelector('.dias');
+                    const para3 = document.querySelector('#para3');
+                    
+                    function horas(num){
+                         
+                       return num * 24;
+                    
+                    }
+                    
+                    input4.onchange = function(){
+                        var num3 = Number(input4.value);
+                    
+                      
+                        if (isNaN(num3)){
+                            para3.textContent = 'escreva um número!';
+                        } else {
+                            para3.textContent = 'o número de horas de viagem é de ' + horas(num3) + ' horas.';
+                        }
+                    }
+                    //3.viagem
+                      </script>
+</div>
+                        </div>
+                       </div>
+                     </div>
+                   
+                <!-- Horas de viagem -->
+       <!-- HORAS VIVIDAS -->
+       <div class="carousel-item">
+        <div class="detail-box col-md-12">
+          <div class="img-box6 col-md-7">
+            <img src="images/24-horas.png" alt="" />
+          </div>
+          <div class="sixthDiv ">
+            <div class="content6">
+              <!-- 4.horas vividas -->
+              <h1>Calcula horas vividas</h1>
+          <label for="">digite sua idade</label>
+          <input class="idade" type="text">
+          <p id="para4"></p>
+          </div>
+          <!-- 4.horas vividas -->
+          <script>
+              //4. horas vividas
+          const input5 = document.querySelector('.idade');
+          const para4 = document.querySelector('#para4');
+          
+          function horasVividas(num){
+             return num * 365 * 24;
+          
+          }
+          
+          input5.onchange = function(){
+              var num4 = Number(input5.value);
+          
+               
+              if (isNaN(num4) ){
+                  para4.textContent = 'escreva um número!';
+              } else {
+                  para4.textContent = 'o número de horas vividas é de ' + horasVividas(num4) + ' horas.';
+              }
+          
+          }
+          //4. horas vividas
+           
+          </script>
+
+
+            </div>
+           </div>
+         </div>
+        
+       <!-- HORAS VIVIDAS -->
+       <!-- CALCULA A SUA IDADE EM DIAS -->
+       <div class="carousel-item">
+        <div class="detail-box col-md-12">
+          <div class="img-box7 col-md-7">
+            <img src="images/meia-idade.png" alt="" />
+          </div>
+          <div class="seventhDiv ">
+            
+             
+                <h1>calcula a idade em dias.</h1>
+                <label for="anos">anos</label>
+                <input id="anos" type="number" />
+                <label for="meses">meses</label>
+                <input id="meses" type="number" />
+                <label for="dias">dias</label>
+                <input id="dias" type="number" />
+                <button id="btn7">calcular</button>
+                <div id="resultado7"></div>
+            
+              <script>
+                window.onload = () => {
+                  let button = document.querySelector("#btn7");
+          
+                  button.addEventListener("click", idade);
+                };
+                btn7.onclick = function idade() {
+                  let resultado = parseInt(document.querySelector("#resultado7"));
+                  let anos = parseInt(document.querySelector("#anos").value);
+                  let meses = parseInt(document.querySelector("#meses").value);
+                  let dias = parseInt(document.querySelector("#dias").value);
+                  let calculo1 = parseInt(anos * 365 + meses * 30 + dias);
+                  document.getElementById(
+                    "resultado7"
+                  ).textContent = ` sua idade em dias é de : ${calculo1} dias`;
+                }
+              </script>
+
+              </div>
+            </div>
+          </div>
+      
+       <!-- CALCULA A SUA IDADE EM DIAS -->
+       <!-- IMC -->
+       <div class="carousel-item">
+        <div class="detail-box col-md-12">
+          <div class="img-box8 col-md-7">
+            <img src="images/imc.png" alt="" />
+          </div>
+          <div class="eigthDiv">
+
+            <div class="container">
+              <h1>Calcula IMC</h1>
+              <label for="peso">peso (em kg)</label>
+              <input id="peso" type="number" />
+        
+              <label for="altura">altura (em metros)</label>
+              <input id="altura" type="number" />
+        
+              <button id="btn8">calcular</button>
+              <div id="resultado8"></div>
+            </div>
+            <script>
+              window.onload = () => {
+                let button = document.querySelector("#btn8");
+        
+                button.addEventListener("click", calculoIMC);
+              };
+        
+              btn8.onclick = function calculoIMC() {
+                let altura = parseFloat(document.querySelector("#altura").value);
+                let peso = parseInt(document.querySelector("#peso").value);
+                let resultado8 = document.querySelector("#resultado8");
+                let imc = (peso / altura ** 2).toFixed(2);
+        
+                if (imc < 18.5)
+                  resultado8.innerHTML = `você está abaixo do peso e seu imc é de : <span>${imc}</span>`;
+                else if (imc >= 25 && imc < 29.9)
+                  resultado8.innerHTML = ` você está acima do peso e seu imc é de : <span>${imc}</span>`;
+                else if (imc > 18.5 && imc < 24.9)
+                  resultado8.innerHTML = `você está com o peso normal e seu imc é de : <span>${imc}<span>`;
+                else
+                  resultado8.innerHTML = ` você está muito acima do peso e seu imc é de : <span>${imc}</span>`;
+              }
+        
+        
+            </script>
+            </div>
+          </div>
+         </div>
+   <!-- MÉDIA -->
+   <div class="carousel-item">
+    <div class="detail-box col-md-12">
+      <div class="img-box9 col-md-7">
+        <img src="images/nota (1).png" alt="" />
+      </div>
+      <div class="ninthDiv">
+       
+<div class="container">
+    
+  <!-- 2.média -->
+  <h1>Calcula a média de dois números</h1>
+<label for="">Para calcular a média, escreva a primeira nota: </label>
+<input class="nota1" type="text">
+<label for="">Para calcular a média, escreva a segunda nota: </label>
+<input class="nota2" type="text">
+<button class="btn9">calcular</button>
+<p id="para2"></p> 
+</div>
+<!-- 2.média -->
+<script>// 2.média
+       window.onload = () => {
+                let button = document.querySelector(".btn9");
+        
+                button.addEventListener("click", calculo);
+              };
+
+
+ function calcula(){
+    let input1 = document.querySelector(".nota1");
+let para2 = document.querySelector("#para2");
+let input2 = document.querySelector(".nota2");
+
+  let num1 = Number(input1.value);
+   let num2 = Number(input2.value);
+   var media = (num1 + num2) / 2;
+ 
+   document.getElementById(
+                    "para2"
+   ).textContent = 'a média é igual a ' + media;
+
+}
+  
+
+
+//2.média
+</script>
+        </div>
+        </div>
+        </div>
+    
+   <!-- MÉDIA -->
+
+   <!-- MULTIPLICA 10 VALORES POR X -->
+   <div class="carousel-item">
+    <div class="detail-box col-md-12">
+      <div class="img-box10 col-md-7">
+        <img src="images/multiplicacao.png" alt="" />
+      </div>
+      <div class="tenthDiv">
+        <div class="container">
+          <h1>Multiplica 10 valores por X</h1>
+          digite 10 valores <input type="number" class="valores"></input>
+          <button class="btn101" type="submit"> Enviar valores </button>
+          <p>Valores digitados:</p>
+          <p class="valoresDigitados"></p>
+          digite o número para multiplicar pelos valores <input type="number" class="numero"></input>
+          <button class="btn102" type="submit">Enviar</button>
+          <p>Número digitado:</p>
+          <p class="numeroDigitado"></p>
+          <p>Quando terminar, aperte o botão para multiplicar</p>  
+          <button class="btn103" type="submit">calcular</button>
+          <p class="resultado10"></p>
+       </div>
+          <script>
+           var valores = document.querySelector(".valores");
+           var numeros = [];
+           var btn101 = document.querySelector(".btn101");
+           var btn102 = document.querySelector(".btn102");
+           var btn103 = document.querySelector(".btn103");
+           var xx;
+           var x1;
+       
+           btn101.onclick = function armazenaValores() {
+             // armazena os números do usuário em um array
+             numeros.push(valores.value);
+             console.log(numeros);
+             document.querySelector(".valoresDigitados").innerHTML = numeros;
+       
+           }
+       
+           btn102.onclick = function armazenaNumero(){
+             //mostra o número que a pessoa digitou
+             var x1 = document.querySelector(".numero").value;
+              document.querySelector(".numeroDigitado").innerHTML = x1;
+       
+             btn103.onclick = function multiplica(){
+               //MULTIPLICA OS VALORES DO ARRAY POR X1
+               xx = numeros.map(x => x * x1);
+                 document.querySelector(".resultado10").innerHTML = `o resultado de cada elemento multiplicado pelo valor digitado é: ${xx}`;
+             }
+       
+           }
+          </script>
+        </div>
+      </div>
+    </div>
+   <!-- MULTIPLICA 10 VALORES POR X -->
+   <!-- PERCENTUAL DE VOTOS -->
+   <div class="carousel-item">
+    <div class="detail-box col-md-12">
+      <div class="img-box col-md-7">
+        <img src="images/vote.png" alt="" />
+      </div>
+     
+        <div class="container">
+          <h1>Calcular o percentual que cada voto representa</h1>
+          <label for="total">Total de eleitores desse município</label>
+          <input id="totalEleitores" type="number" />
+    
+          <label for="votosEmBranco">Votos em Branco</label>
+          <input id="votosEmBranco" type="number" />
+    
+          <label for="votosNulos">Votos nulos</label>
+          <input id="votosNulos" type="number" />
+    
+          <label for="votosValidos">Votos válidos</label>
+          <input id="votosValidos" type="number" />
+    
+          <button id="btnvotos" type="submit">Calcular</button>
+          <div id="resultadovotos"></div>
+   
+    
+        <script>
+          window.onload = () => {
+            let button = document.querySelector("#btnvotos");
+    
+            button.addEventListener("click", calcularVotos);
+          };
+        btnvotos.onclick =  function calcularVotos() {
+            let totalEleitores = parseInt(
+              document.querySelector("#totalEleitores").value
+            );
+            let votosEmBranco = parseInt(
+              document.querySelector("#votosEmBranco").value
+            );
+            let votosNulos = parseInt(document.querySelector("#votosNulos").value);
+            let votosValidos = parseInt(
+              document.querySelector("#votosValidos").value
+            );
+            let resultado = parseInt(document.querySelector("#resultadovotos").value);
+    
+            let percVotosEmBranco = parseInt(
+              (100 * votosEmBranco) / totalEleitores
+            );
+            let percVotosNulos = parseInt((100 * votosNulos) / totalEleitores);
+            let percVotosValidos = parseInt((100 * votosValidos) / totalEleitores);
+              
+
+            resultadovotos.innerHTML = `
+                     o percentual de votos em branco é de : ${percVotosEmBranco} %,
+                     o percentual de votos nulos é de : ${percVotosNulos} %,
+                     o percentual de votos validos é de : ${percVotosValidos} %,
+                   `;
+            console.log(typeof percVotosEmBranco);
+    
+            document.getElementById("resultadovotos").textContent = `
+                     o percentual de votos em branco é de : ${percVotosEmBranco} %,
+                     o percentual de votos nulos é de : ${percVotosNulos} %,
+                     o percentual de votos validos é de : ${percVotosValidos} %,
+                   `;
+          }
+        </script>
+
+     
+</div>
+       </div>
+       </div>
+   <!-- PERCENTUAL DE VOTOS -->
+
+     <!-- CONTA RESTAURANTE -->
+     <div class="carousel-item">
+      <div class="detail-box col-md-12">
+        <div class="img-box12 col-md-7">
+          <img src="images/garconete.png" alt="" />
+        </div>
+        <div class="twelfthDiv">
+          <div class="container">
+            <h1>Valor da conta + 10% do garçon</h1>
+            <label for="">Digite o valor da conta:</label>
+            <input class="valor" type="text">
+            <p id="para5"></p>
+            <!-- 5.restaurante -->
+            </div>
+            <script>
+                //5. restaurante
+             const input6 = document.querySelector('.valor');
+             const para5 = document.querySelector('#para5');
+            
+             function ValorFinal(num){
+                 return num + ((10/100) * num); 
+             }
+            
+             input6.onchange = function(){
+                var num5 = Number(input6.value);
+            
+                if(isNaN(num5)){
+                    para5.textContent = 'escreva um número!';
+            
+                } else {
+                para5.textContent = 'o valor total da conta é de ' + ValorFinal(num5) + ' reais.';
+                }
+             }
+            //5. restaurante
+            </script>
+          </div>
+          </div>
+          </div>
+        
+     <!-- CONTA RESTAURANTE -->
+     <!-- SALARIO FUNCIONARIO AUTOMOBILÍSTICA -->
+     <div class="carousel-item">
+      <div class="detail-box col-md-12">
+        <div class="img-box13 col-md-7">
+          <img src="images/salario.png" alt="" />
+        </div>
+        <div class="thirteenthDiv">
+          <div class="container">
+            <h1>Salário total de um funcionário</h1>
+            <label for="salarioFixo">escreva o valor do salário fixo</label>
+            <input id="salarioFixo" type="number" />
+      
+            <label for="comissaoFixa">valor da comissão fixa: </label>
+            <input id="comissaoFixa" type="number" />
+      
+            <label for="carrosVendidos"
+              >Escreva o número de carros vendidos pelo funcionário:
+            </label>
+            <input id="carrosVendidos" type="number" />
+      
+            <label for="valorVendas"
+              >Escreva o valor total de vendas desse funcionário:
+            </label>
+            <input id="valorVendas" type="number" />
+            <button id="btn13" type="submit">calcular</button>
+      
+            <div id="resultado13"></div>
+          </div>
+        
+      
+        <script>
+          window.onload = () => {
+            let button = document.querySelector("#btn13");
+      
+            button.addEventListener("click", salarioCalculo);
+          };
+      
+          btn13.onclick =  function salarioCalculo() {
+            let salarioFixo = Number(document.querySelector("#salarioFixo").value);
+            let comissaoFixa = Number(document.querySelector("#comissaoFixa").value);
+            let carrosVendidos = Number(
+              document.querySelector("#carrosVendidos").value
+            );
+            let valorVendas = Number(document.querySelector("#valorVendas").value);
+            let comissaoFixaFinal = comissaoFixa * carrosVendidos;
+            let porcentVendas = (5 / 100) * valorVendas;
+            let salarioFinal1 = salarioFixo + comissaoFixaFinal + porcentVendas;
+      
+            document.querySelector(
+              "#resultado13"
+            ).textContent = `o salário final é de : ${salarioFinal1}`;
+            resultado13.innerHTML = ` ${salarioFinal1}`;
+          }
+        </script>
+          </div>
+          </div>
+          </div>
+       
+     <!-- SALARIO FUNCIONARIO AUTOMOBILÍSTICA -->
+     <!-- REAJUSTE DE SALARIO -->
+     <div class="carousel-item">
+      <div class="detail-box col-md-12">
+        <div class="img-box14 col-md-7">
+          <img src="images/mercado.png" alt="" />
+        </div>
+        <div class="fourteenthDiv">
+          <div class="container">
+            <h1>o salário após o reajuste</h1>
+            <label for="salario">Insira o salário inicial :</label>
+            <input id="salario" type="number" />
+      
+            <label for="reajuste">Insira o percentual de reajuste :</label>
+            <input id="reajuste" type="number" />
+      
+            <button id="btn14" type="submit">calcular</button>
+            <div id="resultado14"></div>
+          </div>
+          <script>
+            window.onload = () => {
+              let button = document.querySelector("#btn14");
+      
+              button.addEventListener("click", reajustarSalario);
+            };
+            btn14.onclick =  function reajustarSalario() {
+              let salario = parseInt(document.querySelector("#salario").value);
+              let percentualReajuste = Number(document.querySelector("#reajuste").value);
+              let calculoPercentual = Number((percentualReajuste / 100) * salario);
+              let salarioFinal2 = Number(salario + calculoPercentual);
+      
+              document.getElementById(
+                "resultado14"
+              ).textContent = `o salário com o reajuste é de : ${salarioFinal2}`;
+            }
+          </script>
+          </div>
+          </div>
+          </div>
+     <!-- REAJUSTE DE SALARIO -->
+     <!-- TABUADA -->
+     <div class="carousel-item">
+      <div class="detail-box col-md-12">
+        <div class="img-box15 col-md-7">
+          <img src="images/tabuada.png" alt="" />
+        </div>
+        <div class="fifteenthDiv">
+          <div class="content15">
+            <h1>Tabuada</h1>
+              <label for="">Insira um número.</label>
+              <input type="number" id="x">
+              <button id="btn15" type="submit">Enviar</button>
+             
+              <p id="resultado15"></p>
+          </div>
+      
+      
+          <script>
+            window.onload = () => {
+            let button = document.querySelector("#btn15");
+      
+            button.addEventListener("click",tabuada);
+          };
+         
+          btn15.onclick = function tabuada(){
+  var x = parseInt(document.getElementById("x").value);
+  var resposta = document.getElementById('resultado15');
+  var tabuada='';
+
+  for(var count=1; count<=10 ; count++)
+   tabuada += x +" x "+count+" = "+
+               x*count+"<br />";
+  
+  resultado15.innerHTML = tabuada;
+}
+          
+         
+      
+          </script>
+          </div>
+          </div>
+          </div>
+     <!-- TABUADA -->
+       </div><!-- FECHAMENTO  IMPORTANTE -->
+
+       <!-- IMC -->
+       </div>
+      </div>
+     </div>
+    </div>
+    </section>
+
+
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; 2022 All Rights Reserved. By Polyana Cunha.
+
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+
+
+// var firstDiv = document.querySelector(".firstDiv") ;
+// var imgBox1  = document.querySelector(".secondDiv");
+// var principalDiv = document.querySelector(".detail-box");
+// var carouselItem = document.querySelector(".carousel-item")
+// if(imgBox1 == carouselItem){
+//    principalDiv = firstDiv;
+// }
+
+  </script>
+</body>
+
+</html>
